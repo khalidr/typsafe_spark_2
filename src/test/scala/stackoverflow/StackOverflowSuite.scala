@@ -55,6 +55,12 @@ class StackOverflowSuite extends FlatSpec with BeforeAndAfterAll {
     assert(g === List.empty)
   }
 
+  it should "show the correct results " in {
+    val rdd = sc.parallelize(List(0 → 9172, 0 → 10, 1 → 10, 2 → 4))
+
+
+  }
+
   it should "'groupPostings' should return a question and answer for an rdd with a single question and answer" in {
     val question = Posting(1, 22, None, None, 2, None)
     val answer = Posting(2, 23, Some(100), Some(22), 2, None)
