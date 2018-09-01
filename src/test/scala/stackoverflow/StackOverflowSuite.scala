@@ -111,7 +111,7 @@ class StackOverflowSuite extends FlatSpec with BeforeAndAfterAll {
     highScore.collect shouldBe Seq.empty
   }
 
-  it should "find the higest score for each question" in {
+  it should "find the highest score for each question" in {
     val postings = sc.parallelize(postingsList)
 
     val expectedResult = Seq(Posting(1, 22, None, None, 2, None) → 4, Posting(1, 55, None, None, 2, None) → 3 )
